@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>754.4,819.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1138.4,826.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -129,6 +129,9 @@
         <OutArgument x:TypeArguments="x:String" x:Key="out_ClientDate">
           <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ClientDate" />
         </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PathSaveTemp">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;Second_Rute&quot;).ToString" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ACME_Update_Work_Item workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ACME\ACME_Update_Work_Item.xaml">
@@ -140,24 +143,12 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ACME_WriteExcel workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ACME\ACME_WriteExcel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ClientID">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientID" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNumber">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNumber" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ClientDate">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientDate" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ClientAmount">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientAmount" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strPathFinal" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ClientID">[ClientID]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNumber">[ClientNumber]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ClientDate">[ClientDate]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ClientAmount">[ClientAmount]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrPath">[in_strPathFinal]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
